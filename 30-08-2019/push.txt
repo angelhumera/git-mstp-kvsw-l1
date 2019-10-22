@@ -1,0 +1,161 @@
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~
+$ cd
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~
+$ cd desktop/
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop
+$ cd gitbasics
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ pwd
+/c/Users/R&D6/desktop/gitbasics
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ touch humera.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ nano humera.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ naano humera.txt
+bash: naano: command not found
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ nano humera.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ ls
+humera.txt  sample1.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ ls
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ touch humera.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ nano humera.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ ls
+humera.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/R&D6/Desktop/gitbasics/.git/
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git -a
+unknown option: -a
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git config user.name "angelhumera"
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git config user.email "angelhummuk@gmail.com"
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git remote add gitbasics https://github.com/angelhumera/gitbasics
+fatal: remote gitbasics already exists.
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git remote -v
+gitbasics       https://github.com/angelhumera/gitbasics (fetch)
+gitbasics       https://github.com/angelhumera/gitbasics (push)
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   humera.txt
+        new file:   sample1.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   humera.txt
+        deleted:    sample1.txt
+
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git add humera.txt
+warning: LF will be replaced by CRLF in humera.txt.
+The file will have its original line endings in your working directory
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git commit -m "seeing"
+[master (root-commit) f0b6106] seeing
+ 2 files changed, 1 insertion(+)
+ create mode 100644 humera.txt
+ create mode 100644 sample1.txt
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git log
+commit f0b610653443d0fb454d17ce9460b76528ec0eb7 (HEAD -> master)
+Author: angelhumera <angelhummuk@gmail.com>
+Date:   Fri Aug 30 01:21:27 2019 -0700
+
+    seeing
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git push -u gitbasics master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 266 bytes | 266.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/angelhumera/gitbasics
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'gitbasics'.
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git status
+On branch master
+Your branch is up to date with 'gitbasics/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    sample1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git pull gitbasics master
+From https://github.com/angelhumera/gitbasics
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ ^C
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$ git pull gitbasics master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/angelhumera/gitbasics
+ * branch            master     -> FETCH_HEAD
+   f0b6106..5aa0b33  master     -> gitbasics/master
+Updating f0b6106..5aa0b33
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+R&D6@DESKTOP-OV0C05D MINGW64 ~/desktop/gitbasics (master)
+$
